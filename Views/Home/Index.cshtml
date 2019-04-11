@@ -1,0 +1,10 @@
+﻿@using delicious.Models
+@model List<Dish>
+
+<h2>Welcome to CRUDelicious</h2>
+<p>Check out some recent dishes</p>
+<button><a href="/new">Add a Dish</a></button>
+<hr>
+@foreach(var d in @Model){
+  <p><a href="@d.DishId">@d.Name</a> by @d.Chef</p>
+}
